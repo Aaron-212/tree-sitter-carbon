@@ -28,6 +28,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y clang libc++-dev libc++abi-dev lld
 
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
       - name: Clone carbon-lang
         run: git clone --depth 1 https://github.com/carbon-language/carbon-lang.git "$RUNNER_TEMP/carbon-lang"
 
