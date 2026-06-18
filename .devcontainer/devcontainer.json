@@ -1,0 +1,4 @@
+{
+    "name": "Ubuntu 26.04 Codespace",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-26.04",
+}
