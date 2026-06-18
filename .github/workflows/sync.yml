@@ -51,8 +51,8 @@ jobs:
 
       - name: Patch scanner include
         run: |
-          test "$(sed -n '4p' src/scanner.c)" = '#include "utils/tree_sitter/src/tree_sitter/parser.h"'
-          sed -i '4s|#include "utils/tree_sitter/src/tree_sitter/parser.h"|#include "./tree_sitter/parser.h"|' src/scanner.c
+          grep -Fx '#include "utils/tree_sitter/src/tree_sitter/parser.h"' src/scanner.c
+          sed -i 's|^#include "utils/tree_sitter/src/tree_sitter/parser.h"$|#include "./tree_sitter/parser.h"|' src/scanner.c
 
       - name: Generate parser files
         run: |
