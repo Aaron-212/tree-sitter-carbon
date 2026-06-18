@@ -26,7 +26,7 @@ jobs:
       - name: Install Carbon dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y clang libc++-dev libc++abi-dev lld
+          sudo apt-get install -y clang libc++-dev libc++abi-dev lld libunwind-dev
 
       - name: Install uv
         run: |
@@ -43,10 +43,20 @@ jobs:
       - name: Replace generated files
         run: |
           rsync -a --delete \
-            --exclude=".git" \
-            --exclude=".github" \
-            "$RUNNER_TEMP/carbon-lang/utils/tree_sitter/" \
-            "$GITHUB_WORKSPACE/"
+            "$RUNNER_TEMP/carbon-lang/utils/tree_sitter/src/" \
+            "$GITHUB_WORKSPACE/src/"
+          rsync -a --delete \
+            "$RUNNER_TEMP/carbon-lang/utils/tree_sitter/grammar.js" \
+            "$GITHUB_WORKSPACE/grammar.js"
+
+      - name: Patch scanner include
+        run: |
+          test "$(sed -n '4p' src/scanner.c)" = '#include "utils/tree_sitter/src/tree_sitter/parser.h"'
+          sed -i '4s|#include "utils/tree_sitter/src/tree_sitter/parser.h"|#include "./tree_sitter/parser.h"|' src/scanner.c
+
+      - name: Generate parser files
+        run: |
+          tree-sitter generate
 
       - name: Commit sync
         run: |
