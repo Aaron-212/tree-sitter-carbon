@@ -2,23 +2,25 @@ name: Sync Carbon tree-sitter files
 
 on:
   schedule:
-    - cron: "0 0 * * 4"
+    - cron: "17 0 * * 4"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: sync-carbon-tree-sitter
   cancel-in-progress: false
 
 jobs:
-  sync:
+  generate:
     runs-on: ubuntu-26.04
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
 
       - name: Install tree-sitter
         run: npm install --global tree-sitter-cli
@@ -51,19 +53,70 @@ jobs:
 
       - name: Patch scanner include
         run: |
-          grep -Fx '#include "utils/tree_sitter/src/tree_sitter/parser.h"' src/scanner.c
-          sed -i 's|^#include "utils/tree_sitter/src/tree_sitter/parser.h"$|#include "./tree_sitter/parser.h"|' src/scanner.c
+          if [[ ! -f src/scanner.c ]]; then
+            echo "No external scanner to patch."
+          elif grep -Eq '^[[:space:]]*#include[[:space:]]*"utils/tree_sitter/src/tree_sitter/parser\.h"[[:space:]]*$' src/scanner.c; then
+            sed -Ei 's|^[[:space:]]*#include[[:space:]]*"utils/tree_sitter/src/tree_sitter/parser\.h"[[:space:]]*$|#include "./tree_sitter/parser.h"|' src/scanner.c
+          elif grep -Eq '^[[:space:]]*#include[[:space:]]*"(\./)?tree_sitter/parser\.h"[[:space:]]*$' src/scanner.c; then
+            echo "Scanner already uses the local parser header."
+          else
+            echo "scanner.c uses an unexpected parser header include." >&2
+            exit 1
+          fi
 
       - name: Generate parser files
         run: |
           tree-sitter generate
+
+      - name: Upload generated files
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: generated-parser
+          path: |
+            grammar.js
+            src/
+          if-no-files-found: error
+
+  publish:
+    needs: generate
+    runs-on: ubuntu-26.04
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+
+      - name: Download generated files
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: generated-parser
+          path: ${{ runner.temp }}/generated-parser
+
+      - name: Replace generated files
+        run: |
+          test -f "$RUNNER_TEMP/generated-parser/grammar.js"
+          test -f "$RUNNER_TEMP/generated-parser/src/parser.c"
+          test -f "$RUNNER_TEMP/generated-parser/src/tree_sitter/parser.h"
+
+          if find "$RUNNER_TEMP/generated-parser" -type l -print -quit | grep -q .; then
+            echo "Generated artifact contains an unexpected symbolic link." >&2
+            exit 1
+          fi
+
+          rsync -a --delete \
+            "$RUNNER_TEMP/generated-parser/src/" \
+            "$GITHUB_WORKSPACE/src/"
+          rsync -a \
+            "$RUNNER_TEMP/generated-parser/grammar.js" \
+            "$GITHUB_WORKSPACE/grammar.js"
 
       - name: Commit sync
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -A
+          git add -A -- grammar.js src/
           if git diff --cached --quiet; then
             echo "No parser file changes to commit."
           else
