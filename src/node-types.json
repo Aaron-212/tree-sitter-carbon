@@ -1,5 +1,112 @@
 [
   {
+    "type": "adapt_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "alias_declaration",
     "named": true,
     "fields": {},
@@ -8,7 +115,7 @@
       "required": true,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -32,15 +139,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -56,7 +163,19 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "modifier",
           "named": true
         },
         {
@@ -64,11 +183,15 @@
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -76,7 +199,15 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
@@ -87,186 +218,106 @@
     }
   },
   {
-    "type": "api_or_impl",
+    "type": "array_expression",
     "named": true,
-    "fields": {}
-  },
-  {
-    "type": "array_literal",
-    "named": true,
-    "fields": {
-      "size": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": ".Self",
-            "named": false
-          },
-          {
-            "type": "array_literal",
-            "named": true
-          },
-          {
-            "type": "as_expression",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "builtin_type",
-            "named": true
-          },
-          {
-            "type": "call_expression",
-            "named": true
-          },
-          {
-            "type": "deref_expression",
-            "named": true
-          },
-          {
-            "type": "designator",
-            "named": true
-          },
-          {
-            "type": "fn_type_expression",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "if_expression",
-            "named": true
-          },
-          {
-            "type": "index_expression",
-            "named": true
-          },
-          {
-            "type": "literal",
-            "named": true
-          },
-          {
-            "type": "paren_expression",
-            "named": true
-          },
-          {
-            "type": "pointer_expression",
-            "named": true
-          },
-          {
-            "type": "postfix_expression",
-            "named": true
-          },
-          {
-            "type": "ref_expression",
-            "named": true
-          },
-          {
-            "type": "self",
-            "named": false
-          },
-          {
-            "type": "unary_prefix_expression",
-            "named": true
-          },
-          {
-            "type": "where_expression",
-            "named": true
-          }
-        ]
-      },
-      "type": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": ".Self",
-            "named": false
-          },
-          {
-            "type": "array_literal",
-            "named": true
-          },
-          {
-            "type": "as_expression",
-            "named": true
-          },
-          {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
-            "type": "builtin_type",
-            "named": true
-          },
-          {
-            "type": "call_expression",
-            "named": true
-          },
-          {
-            "type": "deref_expression",
-            "named": true
-          },
-          {
-            "type": "designator",
-            "named": true
-          },
-          {
-            "type": "fn_type_expression",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "if_expression",
-            "named": true
-          },
-          {
-            "type": "index_expression",
-            "named": true
-          },
-          {
-            "type": "literal",
-            "named": true
-          },
-          {
-            "type": "paren_expression",
-            "named": true
-          },
-          {
-            "type": "pointer_expression",
-            "named": true
-          },
-          {
-            "type": "postfix_expression",
-            "named": true
-          },
-          {
-            "type": "ref_expression",
-            "named": true
-          },
-          {
-            "type": "self",
-            "named": false
-          },
-          {
-            "type": "unary_prefix_expression",
-            "named": true
-          },
-          {
-            "type": "where_expression",
-            "named": true
-          }
-        ]
-      }
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -278,7 +329,7 @@
       "required": false,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -298,15 +349,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -322,7 +373,15 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -330,11 +389,15 @@
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -342,7 +405,15 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
@@ -353,7 +424,7 @@
     }
   },
   {
-    "type": "assign_statement",
+    "type": "assignment_expression",
     "named": true,
     "fields": {},
     "children": {
@@ -361,7 +432,7 @@
       "required": false,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -381,15 +452,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -405,7 +476,15 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -413,11 +492,15 @@
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -425,7 +508,122 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "base_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
@@ -444,11 +642,15 @@
         "required": true,
         "types": [
           {
-            "type": ".Self",
+            "type": "Core",
             "named": false
           },
           {
-            "type": "array_literal",
+            "type": "Cpp",
+            "named": false
+          },
+          {
+            "type": "array_expression",
             "named": true
           },
           {
@@ -468,15 +670,15 @@
             "named": true
           },
           {
-            "type": "deref_expression",
+            "type": "designator_expression",
             "named": true
           },
           {
-            "type": "designator",
+            "type": "each_name",
             "named": true
           },
           {
-            "type": "fn_type_expression",
+            "type": "form_literal",
             "named": true
           },
           {
@@ -492,19 +694,35 @@
             "named": true
           },
           {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
             "type": "literal",
             "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
           },
           {
             "type": "paren_expression",
             "named": true
           },
           {
-            "type": "pointer_expression",
+            "type": "pointer_type_expression",
             "named": true
           },
           {
-            "type": "postfix_expression",
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
             "named": true
           },
           {
@@ -516,7 +734,15 @@
             "named": false
           },
           {
-            "type": "unary_prefix_expression",
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
             "named": true
           },
           {
@@ -566,6 +792,10 @@
             "named": false
           },
           {
+            "type": "<=>",
+            "named": false
+          },
+          {
             "type": "==",
             "named": false
           },
@@ -608,11 +838,15 @@
         "required": true,
         "types": [
           {
-            "type": ".Self",
+            "type": "Core",
             "named": false
           },
           {
-            "type": "array_literal",
+            "type": "Cpp",
+            "named": false
+          },
+          {
+            "type": "array_expression",
             "named": true
           },
           {
@@ -632,15 +866,15 @@
             "named": true
           },
           {
-            "type": "deref_expression",
+            "type": "designator_expression",
             "named": true
           },
           {
-            "type": "designator",
+            "type": "each_name",
             "named": true
           },
           {
-            "type": "fn_type_expression",
+            "type": "form_literal",
             "named": true
           },
           {
@@ -656,19 +890,35 @@
             "named": true
           },
           {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
             "type": "literal",
             "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
           },
           {
             "type": "paren_expression",
             "named": true
           },
           {
-            "type": "pointer_expression",
+            "type": "pointer_type_expression",
             "named": true
           },
           {
-            "type": "postfix_expression",
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
             "named": true
           },
           {
@@ -680,7 +930,15 @@
             "named": false
           },
           {
-            "type": "unary_prefix_expression",
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
             "named": true
           },
           {
@@ -692,15 +950,157 @@
     }
   },
   {
-    "type": "binding_lhs",
+    "type": "binding_modifier",
     "named": true,
-    "fields": {},
+    "fields": {}
+  },
+  {
+    "type": "binding_pattern",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_",
+            "named": false
+          },
+          {
+            "type": "each_name",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "self",
+            "named": false
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "Core",
+            "named": false
+          },
+          {
+            "type": "Cpp",
+            "named": false
+          },
+          {
+            "type": "array_expression",
+            "named": true
+          },
+          {
+            "type": "as_expression",
+            "named": true
+          },
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "call_expression",
+            "named": true
+          },
+          {
+            "type": "designator_expression",
+            "named": true
+          },
+          {
+            "type": "each_name",
+            "named": true
+          },
+          {
+            "type": "form_literal",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "index_expression",
+            "named": true
+          },
+          {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
+            "type": "literal",
+            "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
+          },
+          {
+            "type": "paren_expression",
+            "named": true
+          },
+          {
+            "type": "pointer_type_expression",
+            "named": true
+          },
+          {
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
+            "named": true
+          },
+          {
+            "type": "ref_expression",
+            "named": true
+          },
+          {
+            "type": "self",
+            "named": false
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
+            "named": true
+          },
+          {
+            "type": "where_expression",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "ident",
+          "type": "binding_modifier",
           "named": true
         }
       ]
@@ -715,7 +1115,127 @@
       "required": false,
       "types": [
         {
-          "type": "statement",
+          "type": "adapt_declaration",
+          "named": true
+        },
+        {
+          "type": "alias_declaration",
+          "named": true
+        },
+        {
+          "type": "base_declaration",
+          "named": true
+        },
+        {
+          "type": "break_statement",
+          "named": true
+        },
+        {
+          "type": "choice_declaration",
+          "named": true
+        },
+        {
+          "type": "class_declaration",
+          "named": true
+        },
+        {
+          "type": "constraint_declaration",
+          "named": true
+        },
+        {
+          "type": "continue_statement",
+          "named": true
+        },
+        {
+          "type": "empty_declaration",
+          "named": true
+        },
+        {
+          "type": "export_declaration",
+          "named": true
+        },
+        {
+          "type": "expression_statement",
+          "named": true
+        },
+        {
+          "type": "for_statement",
+          "named": true
+        },
+        {
+          "type": "friend_declaration",
+          "named": true
+        },
+        {
+          "type": "function_declaration",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        },
+        {
+          "type": "impl_declaration",
+          "named": true
+        },
+        {
+          "type": "import_declaration",
+          "named": true
+        },
+        {
+          "type": "inline_declaration",
+          "named": true
+        },
+        {
+          "type": "interface_declaration",
+          "named": true
+        },
+        {
+          "type": "let_declaration",
+          "named": true
+        },
+        {
+          "type": "library_declaration",
+          "named": true
+        },
+        {
+          "type": "match_first_declaration",
+          "named": true
+        },
+        {
+          "type": "match_statement",
+          "named": true
+        },
+        {
+          "type": "namespace_declaration",
+          "named": true
+        },
+        {
+          "type": "observe_declaration",
+          "named": true
+        },
+        {
+          "type": "package_declaration",
+          "named": true
+        },
+        {
+          "type": "require_declaration",
+          "named": true
+        },
+        {
+          "type": "return_statement",
+          "named": true
+        },
+        {
+          "type": "returned_var_statement",
+          "named": true
+        },
+        {
+          "type": "var_declaration",
+          "named": true
+        },
+        {
+          "type": "while_statement",
           "named": true
         }
       ]
@@ -739,61 +1259,147 @@
   {
     "type": "call_expression",
     "named": true,
+    "fields": {
+      "arguments": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "paren_expression",
+            "named": true
+          }
+        ]
+      },
+      "function": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "Core",
+            "named": false
+          },
+          {
+            "type": "Cpp",
+            "named": false
+          },
+          {
+            "type": "array_expression",
+            "named": true
+          },
+          {
+            "type": "as_expression",
+            "named": true
+          },
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "call_expression",
+            "named": true
+          },
+          {
+            "type": "designator_expression",
+            "named": true
+          },
+          {
+            "type": "each_name",
+            "named": true
+          },
+          {
+            "type": "form_literal",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "index_expression",
+            "named": true
+          },
+          {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
+            "type": "literal",
+            "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
+          },
+          {
+            "type": "paren_expression",
+            "named": true
+          },
+          {
+            "type": "pointer_type_expression",
+            "named": true
+          },
+          {
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
+            "named": true
+          },
+          {
+            "type": "ref_expression",
+            "named": true
+          },
+          {
+            "type": "self",
+            "named": false
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
+            "named": true
+          },
+          {
+            "type": "where_expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "choice_alternative",
+    "named": true,
     "fields": {},
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
           "type": "ident",
           "named": true
         },
         {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
+          "type": "parameters",
           "named": true
         }
       ]
@@ -808,65 +1414,15 @@
       "required": true,
       "types": [
         {
+          "type": "choice_alternative",
+          "named": true
+        },
+        {
           "type": "declared_name",
           "named": true
         },
         {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "type_params",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "class_body",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "class_body_item",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "class_body_item",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "declaration",
-          "named": true
-        },
-        {
-          "type": "destructor_declaration",
-          "named": true
-        },
-        {
-          "type": "extend_base_declaration",
-          "named": true
-        },
-        {
-          "type": "extend_impl_declaration",
-          "named": true
-        },
-        {
-          "type": "mix_declaration",
+          "type": "modifier",
           "named": true
         }
       ]
@@ -881,7 +1437,7 @@
       "required": true,
       "types": [
         {
-          "type": "class_body",
+          "type": "declaration_body",
           "named": true
         },
         {
@@ -889,11 +1445,7 @@
           "named": true
         },
         {
-          "type": "deduced_params",
-          "named": true
-        },
-        {
-          "type": "type_params",
+          "type": "modifier",
           "named": true
         }
       ]
@@ -908,19 +1460,15 @@
       "required": true,
       "types": [
         {
+          "type": "declaration_body",
+          "named": true
+        },
+        {
           "type": "declared_name",
           "named": true
         },
         {
-          "type": "deduced_params",
-          "named": true
-        },
-        {
-          "type": "interface_body",
-          "named": true
-        },
-        {
-          "type": "type_params",
+          "type": "modifier",
           "named": true
         }
       ]
@@ -932,15 +1480,23 @@
     "fields": {}
   },
   {
-    "type": "declaration",
+    "type": "declaration_body",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
+      "multiple": true,
+      "required": false,
       "types": [
         {
+          "type": "adapt_declaration",
+          "named": true
+        },
+        {
           "type": "alias_declaration",
+          "named": true
+        },
+        {
+          "type": "base_declaration",
           "named": true
         },
         {
@@ -960,11 +1516,27 @@
           "named": true
         },
         {
+          "type": "export_declaration",
+          "named": true
+        },
+        {
+          "type": "friend_declaration",
+          "named": true
+        },
+        {
           "type": "function_declaration",
           "named": true
         },
         {
           "type": "impl_declaration",
+          "named": true
+        },
+        {
+          "type": "import_declaration",
+          "named": true
+        },
+        {
+          "type": "inline_declaration",
           "named": true
         },
         {
@@ -976,15 +1548,27 @@
           "named": true
         },
         {
+          "type": "library_declaration",
+          "named": true
+        },
+        {
           "type": "match_first_declaration",
           "named": true
         },
         {
-          "type": "mixin_declaration",
+          "type": "namespace_declaration",
           "named": true
         },
         {
-          "type": "namespace_declaration",
+          "type": "observe_declaration",
+          "named": true
+        },
+        {
+          "type": "package_declaration",
+          "named": true
+        },
+        {
+          "type": "require_declaration",
           "named": true
         },
         {
@@ -1003,29 +1587,14 @@
       "required": true,
       "types": [
         {
-          "type": "ident",
+          "type": "name_component",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "deduced_param",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "generic_binding",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "deduced_params",
+    "type": "default_value_pattern",
     "named": true,
     "fields": {},
     "children": {
@@ -1033,22 +1602,19 @@
       "required": false,
       "types": [
         {
-          "type": "deduced_param",
+          "type": "array_expression",
           "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "deref_expression",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
+        },
         {
-          "type": "array_literal",
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "binding_pattern",
           "named": true
         },
         {
@@ -1060,15 +1626,19 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "default_value_unspecified",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
           "named": true
         },
         {
@@ -1076,7 +1646,15 @@
           "named": true
         },
         {
+          "type": "if_expression",
+          "named": true
+        },
+        {
           "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
           "named": true
         },
         {
@@ -1084,19 +1662,59 @@
           "named": true
         },
         {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
           "type": "paren_expression",
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
           "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_pattern",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "tuple_pattern",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "unused_pattern",
+          "named": true
+        },
+        {
+          "type": "var_pattern",
+          "named": true
+        },
+        {
+          "type": "where_expression",
           "named": true
         }
       ]
@@ -1118,26 +1736,22 @@
     }
   },
   {
-    "type": "destructor_declaration",
+    "type": "designator_expression",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "types": [
         {
-          "type": "block",
-          "named": true
-        },
-        {
-          "type": "deduced_params",
+          "type": "ident",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "else",
+    "type": "each_name",
     "named": true,
     "fields": {},
     "children": {
@@ -1145,11 +1759,7 @@
       "required": true,
       "types": [
         {
-          "type": "block",
-          "named": true
-        },
-        {
-          "type": "if_statement",
+          "type": "ident",
           "named": true
         }
       ]
@@ -1161,7 +1771,26 @@
     "fields": {}
   },
   {
-    "type": "extend_base_declaration",
+    "type": "export_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "declared_name",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expression_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -1169,11 +1798,15 @@
       "required": false,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
           "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "assignment_expression",
           "named": true
         },
         {
@@ -1189,98 +1822,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "unary_prefix_expression",
-          "named": true
-        },
-        {
-          "type": "where_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "extend_impl_declaration",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "as_expression",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -1292,7 +1842,7 @@
           "named": true
         },
         {
-          "type": "impl_body",
+          "type": "increment_expression",
           "named": true
         },
         {
@@ -1300,7 +1850,15 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -1308,11 +1866,15 @@
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -1320,74 +1882,19 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
           "type": "where_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "fn_type_expression",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
           "named": true
         }
       ]
@@ -1402,7 +1909,7 @@
       "required": true,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -1414,7 +1921,7 @@
           "named": true
         },
         {
-          "type": "binding_lhs",
+          "type": "binding_pattern",
           "named": true
         },
         {
@@ -1430,15 +1937,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -1454,7 +1961,15 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -1462,15 +1977,15 @@
           "named": true
         },
         {
-          "type": "paren_pattern",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "positional_param",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -1478,7 +1993,241 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_pattern",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "tuple_pattern",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "unused_pattern",
+          "named": true
+        },
+        {
+          "type": "var_pattern",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "form_literal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "friend_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
@@ -1491,112 +2240,150 @@
   {
     "type": "function_declaration",
     "named": true,
-    "fields": {},
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "Core",
+            "named": false
+          },
+          {
+            "type": "Cpp",
+            "named": false
+          },
+          {
+            "type": "array_expression",
+            "named": true
+          },
+          {
+            "type": "as_expression",
+            "named": true
+          },
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "block",
+            "named": true
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "call_expression",
+            "named": true
+          },
+          {
+            "type": "designator_expression",
+            "named": true
+          },
+          {
+            "type": "each_name",
+            "named": true
+          },
+          {
+            "type": "form_literal",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "index_expression",
+            "named": true
+          },
+          {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
+            "type": "literal",
+            "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
+          },
+          {
+            "type": "paren_expression",
+            "named": true
+          },
+          {
+            "type": "pointer_type_expression",
+            "named": true
+          },
+          {
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
+            "named": true
+          },
+          {
+            "type": "ref_expression",
+            "named": true
+          },
+          {
+            "type": "self",
+            "named": false
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
+            "named": true
+          },
+          {
+            "type": "where_expression",
+            "named": true
+          }
+        ]
+      },
+      "builtin": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "block",
-          "named": true
-        },
         {
           "type": "declared_name",
           "named": true
         },
         {
-          "type": "deduced_params",
-          "named": true
-        },
-        {
-          "type": "paren_pattern",
+          "type": "modifier",
           "named": true
         },
         {
           "type": "return_type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "generic_binding",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "as_expression",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "unary_prefix_expression",
-          "named": true
-        },
-        {
-          "type": "where_expression",
           "named": true
         }
       ]
@@ -1611,7 +2398,7 @@
       "required": false,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -1631,15 +2418,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -1655,7 +2442,15 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -1663,11 +2458,15 @@
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -1675,7 +2474,15 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
@@ -1688,13 +2495,811 @@
   {
     "type": "if_statement",
     "named": true,
+    "fields": {
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "Core",
+            "named": false
+          },
+          {
+            "type": "Cpp",
+            "named": false
+          },
+          {
+            "type": "array_expression",
+            "named": true
+          },
+          {
+            "type": "as_expression",
+            "named": true
+          },
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "call_expression",
+            "named": true
+          },
+          {
+            "type": "designator_expression",
+            "named": true
+          },
+          {
+            "type": "each_name",
+            "named": true
+          },
+          {
+            "type": "form_literal",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "index_expression",
+            "named": true
+          },
+          {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
+            "type": "literal",
+            "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
+          },
+          {
+            "type": "paren_expression",
+            "named": true
+          },
+          {
+            "type": "pointer_type_expression",
+            "named": true
+          },
+          {
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
+            "named": true
+          },
+          {
+            "type": "ref_expression",
+            "named": true
+          },
+          {
+            "type": "self",
+            "named": false
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
+            "named": true
+          },
+          {
+            "type": "where_expression",
+            "named": true
+          }
+        ]
+      },
+      "else": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          },
+          {
+            "type": "if_statement",
+            "named": true
+          }
+        ]
+      },
+      "then": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "impl_declaration",
+    "named": true,
+    "fields": {
+      "interface": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "Core",
+            "named": false
+          },
+          {
+            "type": "Cpp",
+            "named": false
+          },
+          {
+            "type": "array_expression",
+            "named": true
+          },
+          {
+            "type": "as_expression",
+            "named": true
+          },
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "call_expression",
+            "named": true
+          },
+          {
+            "type": "designator_expression",
+            "named": true
+          },
+          {
+            "type": "each_name",
+            "named": true
+          },
+          {
+            "type": "form_literal",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "index_expression",
+            "named": true
+          },
+          {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
+            "type": "literal",
+            "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
+          },
+          {
+            "type": "paren_expression",
+            "named": true
+          },
+          {
+            "type": "pointer_type_expression",
+            "named": true
+          },
+          {
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
+            "named": true
+          },
+          {
+            "type": "ref_expression",
+            "named": true
+          },
+          {
+            "type": "self",
+            "named": false
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
+            "named": true
+          },
+          {
+            "type": "where_expression",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "Core",
+            "named": false
+          },
+          {
+            "type": "Cpp",
+            "named": false
+          },
+          {
+            "type": "array_expression",
+            "named": true
+          },
+          {
+            "type": "as_expression",
+            "named": true
+          },
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "call_expression",
+            "named": true
+          },
+          {
+            "type": "designator_expression",
+            "named": true
+          },
+          {
+            "type": "each_name",
+            "named": true
+          },
+          {
+            "type": "form_literal",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "index_expression",
+            "named": true
+          },
+          {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
+            "type": "literal",
+            "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
+          },
+          {
+            "type": "paren_expression",
+            "named": true
+          },
+          {
+            "type": "pointer_type_expression",
+            "named": true
+          },
+          {
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
+            "named": true
+          },
+          {
+            "type": "ref_expression",
+            "named": true
+          },
+          {
+            "type": "self",
+            "named": false
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
+            "named": true
+          },
+          {
+            "type": "where_expression",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "declaration_body",
+          "named": true
+        },
+        {
+          "type": "implicit_parameters",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "implicit_parameters",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "binding_pattern",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "default_value_pattern",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_pattern",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "tuple_pattern",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "unused_pattern",
+          "named": true
+        },
+        {
+          "type": "var_pattern",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "import_declaration",
+    "named": true,
     "fields": {},
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "array_literal",
+          "type": "library_specifier",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        },
+        {
+          "type": "package_name",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "increment_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "index_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inline_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "modifier",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "interface_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "declaration_body",
+          "named": true
+        },
+        {
+          "type": "declared_name",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lambda_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
           "named": true
         },
         {
@@ -1718,19 +3323,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "else",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -1742,128 +3343,7 @@
           "named": true
         },
         {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "unary_prefix_expression",
-          "named": true
-        },
-        {
-          "type": "where_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "impl_body",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "impl_body_item",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "impl_body_item",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "alias_declaration",
-          "named": true
-        },
-        {
-          "type": "function_declaration",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "impl_declaration",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "as_expression",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deduced_params",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "impl_body",
+          "type": "implicit_parameters",
           "named": true
         },
         {
@@ -1871,105 +3351,7 @@
           "named": true
         },
         {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "unary_prefix_expression",
-          "named": true
-        },
-        {
-          "type": "where_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "import_directive",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "library_path",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "index_expression",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "as_expression",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "index_expression",
+          "type": "lambda_expression",
           "named": true
         },
         {
@@ -1977,109 +3359,11 @@
           "named": true
         },
         {
-          "type": "paren_expression",
+          "type": "member_access_expression",
           "named": true
         },
         {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "unary_prefix_expression",
-          "named": true
-        },
-        {
-          "type": "where_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "interface_body",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "interface_body_item",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "interface_body_item",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "as_expression",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "function_declaration",
-          "named": true
-        },
-        {
-          "type": "generic_binding",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
+          "type": "parameters",
           "named": true
         },
         {
@@ -2087,11 +3371,15 @@
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -2099,38 +3387,23 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "return_type",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
           "type": "where_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "interface_declaration",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "declared_name",
-          "named": true
-        },
-        {
-          "type": "deduced_params",
-          "named": true
-        },
-        {
-          "type": "interface_body",
-          "named": true
-        },
-        {
-          "type": "type_params",
           "named": true
         }
       ]
@@ -2145,7 +3418,7 @@
       "required": false,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -2157,7 +3430,7 @@
           "named": true
         },
         {
-          "type": "binding_lhs",
+          "type": "binding_pattern",
           "named": true
         },
         {
@@ -2169,15 +3442,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -2193,7 +3466,19 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "modifier",
           "named": true
         },
         {
@@ -2201,15 +3486,15 @@
           "named": true
         },
         {
-          "type": "paren_pattern",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "positional_param",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -2217,7 +3502,31 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_pattern",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "tuple_pattern",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "unused_pattern",
+          "named": true
+        },
+        {
+          "type": "var_pattern",
           "named": true
         },
         {
@@ -2228,12 +3537,31 @@
     }
   },
   {
-    "type": "library_path",
+    "type": "library_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "modifier",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "library_specifier",
     "named": true,
     "fields": {},
     "children": {
       "multiple": false,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "string",
@@ -2255,6 +3583,10 @@
           "named": true
         },
         {
+          "type": "char_literal",
+          "named": true
+        },
+        {
           "type": "numeric_literal",
           "named": true
         },
@@ -2265,28 +3597,135 @@
         {
           "type": "string",
           "named": true
-        },
-        {
-          "type": "struct_literal",
-          "named": true
-        },
-        {
-          "type": "struct_type_literal",
-          "named": true
         }
       ]
     }
   },
   {
-    "type": "match_clause",
+    "type": "match_case",
     "named": true,
-    "fields": {},
+    "fields": {
+      "guard": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "Core",
+            "named": false
+          },
+          {
+            "type": "Cpp",
+            "named": false
+          },
+          {
+            "type": "array_expression",
+            "named": true
+          },
+          {
+            "type": "as_expression",
+            "named": true
+          },
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "call_expression",
+            "named": true
+          },
+          {
+            "type": "designator_expression",
+            "named": true
+          },
+          {
+            "type": "each_name",
+            "named": true
+          },
+          {
+            "type": "form_literal",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "index_expression",
+            "named": true
+          },
+          {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
+            "type": "literal",
+            "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
+          },
+          {
+            "type": "paren_expression",
+            "named": true
+          },
+          {
+            "type": "pointer_type_expression",
+            "named": true
+          },
+          {
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
+            "named": true
+          },
+          {
+            "type": "ref_expression",
+            "named": true
+          },
+          {
+            "type": "self",
+            "named": false
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
+            "named": true
+          },
+          {
+            "type": "where_expression",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -2298,7 +3737,7 @@
           "named": true
         },
         {
-          "type": "binding_lhs",
+          "type": "binding_pattern",
           "named": true
         },
         {
@@ -2314,15 +3753,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -2338,7 +3777,15 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -2346,15 +3793,15 @@
           "named": true
         },
         {
-          "type": "paren_pattern",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "positional_param",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -2362,11 +3809,50 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_pattern",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "tuple_pattern",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "unused_pattern",
+          "named": true
+        },
+        {
+          "type": "var_pattern",
           "named": true
         },
         {
           "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "match_default",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
           "named": true
         }
       ]
@@ -2378,10 +3864,14 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
-          "type": "impl_declaration",
+          "type": "declaration_body",
+          "named": true
+        },
+        {
+          "type": "modifier",
           "named": true
         }
       ]
@@ -2396,7 +3886,7 @@
       "required": false,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -2416,15 +3906,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -2440,11 +3930,23 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
           "named": true
         },
         {
-          "type": "match_clause",
+          "type": "match_case",
+          "named": true
+        },
+        {
+          "type": "match_default",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -2452,11 +3954,15 @@
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -2464,7 +3970,15 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
@@ -2475,7 +3989,257 @@
     }
   },
   {
-    "type": "mix_declaration",
+    "type": "member_access_expression",
+    "named": true,
+    "fields": {
+      "member": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "Core",
+            "named": false
+          },
+          {
+            "type": "Cpp",
+            "named": false
+          },
+          {
+            "type": "array_expression",
+            "named": true
+          },
+          {
+            "type": "as_expression",
+            "named": true
+          },
+          {
+            "type": "base",
+            "named": false
+          },
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "call_expression",
+            "named": true
+          },
+          {
+            "type": "designator_expression",
+            "named": true
+          },
+          {
+            "type": "each_name",
+            "named": true
+          },
+          {
+            "type": "form_literal",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "index_expression",
+            "named": true
+          },
+          {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
+            "type": "literal",
+            "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
+          },
+          {
+            "type": "paren_expression",
+            "named": true
+          },
+          {
+            "type": "pointer_type_expression",
+            "named": true
+          },
+          {
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
+            "named": true
+          },
+          {
+            "type": "ref_expression",
+            "named": true
+          },
+          {
+            "type": "self",
+            "named": false
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "tuple_index",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
+            "named": true
+          },
+          {
+            "type": "where_expression",
+            "named": true
+          }
+        ]
+      },
+      "object": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "Core",
+            "named": false
+          },
+          {
+            "type": "Cpp",
+            "named": false
+          },
+          {
+            "type": "array_expression",
+            "named": true
+          },
+          {
+            "type": "as_expression",
+            "named": true
+          },
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "call_expression",
+            "named": true
+          },
+          {
+            "type": "designator_expression",
+            "named": true
+          },
+          {
+            "type": "each_name",
+            "named": true
+          },
+          {
+            "type": "form_literal",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "index_expression",
+            "named": true
+          },
+          {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
+            "type": "literal",
+            "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
+          },
+          {
+            "type": "paren_expression",
+            "named": true
+          },
+          {
+            "type": "pointer_type_expression",
+            "named": true
+          },
+          {
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
+            "named": true
+          },
+          {
+            "type": "ref_expression",
+            "named": true
+          },
+          {
+            "type": "self",
+            "named": false
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
+            "named": true
+          },
+          {
+            "type": "where_expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "modifier",
     "named": true,
     "fields": {},
     "children": {
@@ -2483,82 +4247,14 @@
       "required": false,
       "types": [
         {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "as_expression",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "unary_prefix_expression",
-          "named": true
-        },
-        {
-          "type": "where_expression",
+          "type": "library_specifier",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "mixin_declaration",
+    "type": "name_component",
     "named": true,
     "fields": {},
     "children": {
@@ -2566,91 +4262,15 @@
       "required": true,
       "types": [
         {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "as_expression",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "declared_name",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "function_declaration",
-          "named": true
-        },
-        {
           "type": "ident",
           "named": true
         },
         {
-          "type": "if_expression",
+          "type": "implicit_parameters",
           "named": true
         },
         {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "mix_declaration",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "type_params",
-          "named": true
-        },
-        {
-          "type": "unary_prefix_expression",
-          "named": true
-        },
-        {
-          "type": "where_expression",
+          "type": "parameters",
           "named": true
         }
       ]
@@ -2661,26 +4281,58 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "declared_name",
+          "named": true
+        },
+        {
+          "type": "modifier",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "package_directive",
+    "type": "observe_declaration",
     "named": true,
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "api_or_impl",
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
           "named": true
         },
         {
@@ -2688,7 +4340,228 @@
           "named": true
         },
         {
-          "type": "library_path",
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "package_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "library_specifier",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        },
+        {
+          "type": "package_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "package_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "ident",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "parameters",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "binding_pattern",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "default_value_pattern",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_pattern",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "tuple_pattern",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "unused_pattern",
+          "named": true
+        },
+        {
+          "type": "var_pattern",
+          "named": true
+        },
+        {
+          "type": "where_expression",
           "named": true
         }
       ]
@@ -2703,7 +4576,7 @@
       "required": false,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -2723,102 +4596,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "unary_prefix_expression",
-          "named": true
-        },
-        {
-          "type": "where_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "paren_pattern",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "as_expression",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "binding_lhs",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -2834,7 +4620,15 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -2842,15 +4636,15 @@
           "named": true
         },
         {
-          "type": "paren_pattern",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "positional_param",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -2858,7 +4652,15 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
@@ -2869,7 +4671,7 @@
     }
   },
   {
-    "type": "pointer_expression",
+    "type": "pointer_type_expression",
     "named": true,
     "fields": {},
     "children": {
@@ -2877,74 +4679,7 @@
       "required": true,
       "types": [
         {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_star",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "postfix_expression",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -2964,15 +4699,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -2988,7 +4723,15 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -2996,11 +4739,19 @@
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "postfix_star",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -3008,7 +4759,15 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
@@ -3016,6 +4775,168 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "prefix_expression",
+    "named": true,
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "&",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "^",
+            "named": false
+          },
+          {
+            "type": "const",
+            "named": false
+          },
+          {
+            "type": "expand",
+            "named": false
+          },
+          {
+            "type": "like",
+            "named": false
+          },
+          {
+            "type": "not",
+            "named": false
+          },
+          {
+            "type": "partial",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "Core",
+            "named": false
+          },
+          {
+            "type": "Cpp",
+            "named": false
+          },
+          {
+            "type": "array_expression",
+            "named": true
+          },
+          {
+            "type": "as_expression",
+            "named": true
+          },
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "builtin_type",
+            "named": true
+          },
+          {
+            "type": "call_expression",
+            "named": true
+          },
+          {
+            "type": "designator_expression",
+            "named": true
+          },
+          {
+            "type": "each_name",
+            "named": true
+          },
+          {
+            "type": "form_literal",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "if_expression",
+            "named": true
+          },
+          {
+            "type": "index_expression",
+            "named": true
+          },
+          {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
+            "type": "literal",
+            "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
+          },
+          {
+            "type": "paren_expression",
+            "named": true
+          },
+          {
+            "type": "pointer_type_expression",
+            "named": true
+          },
+          {
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
+            "named": true
+          },
+          {
+            "type": "ref_expression",
+            "named": true
+          },
+          {
+            "type": "self",
+            "named": false
+          },
+          {
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
+            "named": true
+          },
+          {
+            "type": "where_expression",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -3027,7 +4948,15 @@
       "required": false,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
           "named": true
         },
         {
@@ -3039,15 +4968,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -3055,7 +4984,15 @@
           "named": true
         },
         {
+          "type": "if_expression",
+          "named": true
+        },
+        {
           "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
           "named": true
         },
         {
@@ -3063,19 +5000,253 @@
           "named": true
         },
         {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
           "type": "paren_expression",
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
           "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "require_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "requirement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
           "named": true
         }
       ]
@@ -3090,7 +5261,7 @@
       "required": false,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -3110,15 +5281,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -3134,7 +5305,15 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -3142,11 +5321,15 @@
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -3154,7 +5337,15 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
@@ -3173,7 +5364,7 @@
       "required": false,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -3193,15 +5384,15 @@
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "designator_expression",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "each_name",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "form_literal",
           "named": true
         },
         {
@@ -3217,7 +5408,15 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -3225,11 +5424,15 @@
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -3237,7 +5440,15 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
@@ -3272,90 +5483,59 @@
       "required": false,
       "types": [
         {
-          "type": "declaration",
+          "type": "adapt_declaration",
           "named": true
         },
         {
-          "type": "import_directive",
+          "type": "alias_declaration",
           "named": true
         },
         {
-          "type": "package_directive",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "statement",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "array_literal",
+          "type": "base_declaration",
           "named": true
         },
         {
-          "type": "as_expression",
+          "type": "choice_declaration",
           "named": true
         },
         {
-          "type": "assign_statement",
+          "type": "class_declaration",
           "named": true
         },
         {
-          "type": "binary_expression",
+          "type": "constraint_declaration",
           "named": true
         },
         {
-          "type": "break_statement",
+          "type": "empty_declaration",
           "named": true
         },
         {
-          "type": "builtin_type",
+          "type": "export_declaration",
           "named": true
         },
         {
-          "type": "call_expression",
+          "type": "friend_declaration",
           "named": true
         },
         {
-          "type": "continue_statement",
+          "type": "function_declaration",
           "named": true
         },
         {
-          "type": "deref_expression",
+          "type": "impl_declaration",
           "named": true
         },
         {
-          "type": "designator",
+          "type": "import_declaration",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "inline_declaration",
           "named": true
         },
         {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "if_statement",
-          "named": true
-        },
-        {
-          "type": "index_expression",
+          "type": "interface_declaration",
           "named": true
         },
         {
@@ -3363,51 +5543,31 @@
           "named": true
         },
         {
-          "type": "literal",
+          "type": "library_declaration",
           "named": true
         },
         {
-          "type": "match_statement",
+          "type": "match_first_declaration",
           "named": true
         },
         {
-          "type": "paren_expression",
+          "type": "namespace_declaration",
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "observe_declaration",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "package_declaration",
           "named": true
         },
         {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "return_statement",
-          "named": true
-        },
-        {
-          "type": "returned_var_statement",
-          "named": true
-        },
-        {
-          "type": "unary_prefix_expression",
+          "type": "require_declaration",
           "named": true
         },
         {
           "type": "var_declaration",
-          "named": true
-        },
-        {
-          "type": "where_expression",
-          "named": true
-        },
-        {
-          "type": "while_statement",
           "named": true
         }
       ]
@@ -3422,7 +5582,7 @@
       "required": false,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -3442,15 +5602,19 @@
           "named": true
         },
         {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
           "type": "designator",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
           "named": true
         },
         {
@@ -3466,7 +5630,15 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -3474,11 +5646,15 @@
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -3486,7 +5662,146 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "struct_pattern",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "binding_pattern",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "default_value_pattern",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_pattern",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "tuple_pattern",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "unused_pattern",
+          "named": true
+        },
+        {
+          "type": "var_pattern",
           "named": true
         },
         {
@@ -3502,10 +5817,10 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
-          "type": "array_literal",
+          "type": "array_expression",
           "named": true
         },
         {
@@ -3525,15 +5840,19 @@
           "named": true
         },
         {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
           "type": "designator",
           "named": true
         },
         {
-          "type": "fn_type_expression",
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
           "named": true
         },
         {
@@ -3549,7 +5868,15 @@
           "named": true
         },
         {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
           "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
           "named": true
         },
         {
@@ -3557,11 +5884,15 @@
           "named": true
         },
         {
-          "type": "pointer_expression",
+          "type": "pointer_type_expression",
           "named": true
         },
         {
-          "type": "postfix_expression",
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
           "named": true
         },
         {
@@ -3569,7 +5900,15 @@
           "named": true
         },
         {
-          "type": "unary_prefix_expression",
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
           "named": true
         },
         {
@@ -3580,60 +5919,733 @@
     }
   },
   {
-    "type": "type_params",
+    "type": "tuple_pattern",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
+      "multiple": true,
+      "required": false,
       "types": [
         {
-          "type": "paren_pattern",
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "binding_pattern",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "default_value_pattern",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_pattern",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "tuple_pattern",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "unused_pattern",
+          "named": true
+        },
+        {
+          "type": "var_pattern",
+          "named": true
+        },
+        {
+          "type": "where_expression",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "unary_prefix_expression",
+    "type": "typeof_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unused_pattern",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "binding_pattern",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_pattern",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "tuple_pattern",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "unused_pattern",
+          "named": true
+        },
+        {
+          "type": "var_pattern",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "var_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "binding_pattern",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_pattern",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "tuple_pattern",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "unused_pattern",
+          "named": true
+        },
+        {
+          "type": "var_pattern",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "var_pattern",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "binding_pattern",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_pattern",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "tuple_pattern",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "unused_pattern",
+          "named": true
+        },
+        {
+          "type": "var_pattern",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "where_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array_expression",
+          "named": true
+        },
+        {
+          "type": "as_expression",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
+          "type": "designator_expression",
+          "named": true
+        },
+        {
+          "type": "each_name",
+          "named": true
+        },
+        {
+          "type": "form_literal",
+          "named": true
+        },
+        {
+          "type": "ident",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "lambda_expression",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "member_access_expression",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "pointer_type_expression",
+          "named": true
+        },
+        {
+          "type": "positional_param",
+          "named": true
+        },
+        {
+          "type": "prefix_expression",
+          "named": true
+        },
+        {
+          "type": "ref_expression",
+          "named": true
+        },
+        {
+          "type": "requirement",
+          "named": true
+        },
+        {
+          "type": "struct_literal",
+          "named": true
+        },
+        {
+          "type": "struct_type_literal",
+          "named": true
+        },
+        {
+          "type": "typeof_expression",
+          "named": true
+        },
+        {
+          "type": "where_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "while_statement",
     "named": true,
     "fields": {
-      "operator": {
+      "condition": {
         "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "++",
+            "type": "Core",
             "named": false
           },
           {
-            "type": "-",
+            "type": "Cpp",
             "named": false
           },
           {
-            "type": "--",
-            "named": false
-          },
-          {
-            "type": "^",
-            "named": false
-          },
-          {
-            "type": "not",
-            "named": false
-          }
-        ]
-      },
-      "value": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": ".Self",
-            "named": false
-          },
-          {
-            "type": "array_literal",
+            "type": "array_expression",
             "named": true
           },
           {
@@ -3653,15 +6665,15 @@
             "named": true
           },
           {
-            "type": "deref_expression",
+            "type": "designator_expression",
             "named": true
           },
           {
-            "type": "designator",
+            "type": "each_name",
             "named": true
           },
           {
-            "type": "fn_type_expression",
+            "type": "form_literal",
             "named": true
           },
           {
@@ -3677,19 +6689,35 @@
             "named": true
           },
           {
+            "type": "lambda_expression",
+            "named": true
+          },
+          {
             "type": "literal",
             "named": true
+          },
+          {
+            "type": "member_access_expression",
+            "named": true
+          },
+          {
+            "type": "package",
+            "named": false
           },
           {
             "type": "paren_expression",
             "named": true
           },
           {
-            "type": "pointer_expression",
+            "type": "pointer_type_expression",
             "named": true
           },
           {
-            "type": "postfix_expression",
+            "type": "positional_param",
+            "named": true
+          },
+          {
+            "type": "prefix_expression",
             "named": true
           },
           {
@@ -3701,7 +6729,15 @@
             "named": false
           },
           {
-            "type": "unary_prefix_expression",
+            "type": "struct_literal",
+            "named": true
+          },
+          {
+            "type": "struct_type_literal",
+            "named": true
+          },
+          {
+            "type": "typeof_expression",
             "named": true
           },
           {
@@ -3710,335 +6746,13 @@
           }
         ]
       }
-    }
-  },
-  {
-    "type": "var_declaration",
-    "named": true,
-    "fields": {},
+    },
     "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "as_expression",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "binding_lhs",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "paren_pattern",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "unary_prefix_expression",
-          "named": true
-        },
-        {
-          "type": "where_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "where_clause",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "where_clause",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "where_expression",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
-        {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "as_expression",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "unary_prefix_expression",
-          "named": true
-        },
-        {
-          "type": "where_clause",
-          "named": true
-        },
-        {
-          "type": "where_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "while_statement",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "array_literal",
-          "named": true
-        },
-        {
-          "type": "as_expression",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
         {
           "type": "block",
-          "named": true
-        },
-        {
-          "type": "builtin_type",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
-        {
-          "type": "deref_expression",
-          "named": true
-        },
-        {
-          "type": "designator",
-          "named": true
-        },
-        {
-          "type": "fn_type_expression",
-          "named": true
-        },
-        {
-          "type": "ident",
-          "named": true
-        },
-        {
-          "type": "if_expression",
-          "named": true
-        },
-        {
-          "type": "index_expression",
-          "named": true
-        },
-        {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "paren_expression",
-          "named": true
-        },
-        {
-          "type": "pointer_expression",
-          "named": true
-        },
-        {
-          "type": "postfix_expression",
-          "named": true
-        },
-        {
-          "type": "ref_expression",
-          "named": true
-        },
-        {
-          "type": "unary_prefix_expression",
-          "named": true
-        },
-        {
-          "type": "where_expression",
           "named": true
         }
       ]
@@ -4113,11 +6827,11 @@
     "named": false
   },
   {
-    "type": ".",
+    "type": "->?",
     "named": false
   },
   {
-    "type": ".Self",
+    "type": ".",
     "named": false
   },
   {
@@ -4133,7 +6847,7 @@
     "named": false
   },
   {
-    "type": ":!",
+    "type": ":?",
     "named": false
   },
   {
@@ -4154,6 +6868,10 @@
   },
   {
     "type": "<=",
+    "named": false
+  },
+  {
+    "type": "<=>",
     "named": false
   },
   {
@@ -4185,11 +6903,15 @@
     "named": false
   },
   {
-    "type": "Self",
+    "type": "Core",
     "named": false
   },
   {
-    "type": "String",
+    "type": "Cpp",
+    "named": false
+  },
+  {
+    "type": "Self",
     "named": false
   },
   {
@@ -4213,23 +6935,11 @@
     "named": false
   },
   {
-    "type": "__Fn",
-    "named": false
-  },
-  {
-    "type": "__match_first",
-    "named": false
-  },
-  {
-    "type": "__mix",
-    "named": false
-  },
-  {
-    "type": "__mixin",
-    "named": false
-  },
-  {
     "type": "abstract",
+    "named": false
+  },
+  {
+    "type": "adapt",
     "named": false
   },
   {
@@ -4241,7 +6951,7 @@
     "named": false
   },
   {
-    "type": "api",
+    "type": "array",
     "named": false
   },
   {
@@ -4273,6 +6983,14 @@
     "named": false
   },
   {
+    "type": "char",
+    "named": false
+  },
+  {
+    "type": "char_literal",
+    "named": true
+  },
+  {
     "type": "choice",
     "named": false
   },
@@ -4284,6 +7002,10 @@
     "type": "comment",
     "named": true,
     "extra": true
+  },
+  {
+    "type": "const",
+    "named": false
   },
   {
     "type": "constraint",
@@ -4298,7 +7020,11 @@
     "named": false
   },
   {
-    "type": "destructor",
+    "type": "default_value_unspecified",
+    "named": true
+  },
+  {
+    "type": "each",
     "named": false
   },
   {
@@ -4306,11 +7032,31 @@
     "named": false
   },
   {
+    "type": "eval",
+    "named": false
+  },
+  {
+    "type": "expand",
+    "named": false
+  },
+  {
+    "type": "export",
+    "named": false
+  },
+  {
     "type": "extend",
     "named": false
   },
   {
+    "type": "extern",
+    "named": false
+  },
+  {
     "type": "false",
+    "named": false
+  },
+  {
+    "type": "final",
     "named": false
   },
   {
@@ -4323,6 +7069,18 @@
   },
   {
     "type": "forall",
+    "named": false
+  },
+  {
+    "type": "form",
+    "named": false
+  },
+  {
+    "type": "friend",
+    "named": false
+  },
+  {
+    "type": "generic",
     "named": false
   },
   {
@@ -4350,6 +7108,10 @@
     "named": false
   },
   {
+    "type": "inline",
+    "named": false
+  },
+  {
     "type": "interface",
     "named": false
   },
@@ -4362,7 +7124,19 @@
     "named": false
   },
   {
+    "type": "like",
+    "named": false
+  },
+  {
     "type": "match",
+    "named": false
+  },
+  {
+    "type": "match_first",
+    "named": false
+  },
+  {
+    "type": "musteval",
     "named": false
   },
   {
@@ -4382,7 +7156,15 @@
     "named": true
   },
   {
+    "type": "observe",
+    "named": false
+  },
+  {
     "type": "or",
+    "named": false
+  },
+  {
+    "type": "override",
     "named": false
   },
   {
@@ -4390,8 +7172,24 @@
     "named": false
   },
   {
+    "type": "partial",
+    "named": false
+  },
+  {
+    "type": "positional_param",
+    "named": true
+  },
+  {
     "type": "postfix_star",
     "named": true
+  },
+  {
+    "type": "private",
+    "named": false
+  },
+  {
+    "type": "protected",
+    "named": false
   },
   {
     "type": "ref",
@@ -4410,11 +7208,19 @@
     "named": false
   },
   {
+    "type": "runtime",
+    "named": false
+  },
+  {
     "type": "self",
     "named": false
   },
   {
     "type": "static",
+    "named": false
+  },
+  {
+    "type": "str",
     "named": false
   },
   {
@@ -4434,7 +7240,27 @@
     "named": false
   },
   {
+    "type": "tuple_index",
+    "named": true
+  },
+  {
     "type": "type",
+    "named": false
+  },
+  {
+    "type": "typeof",
+    "named": false
+  },
+  {
+    "type": "unsafe",
+    "named": false
+  },
+  {
+    "type": "unused",
+    "named": false
+  },
+  {
+    "type": "val",
     "named": false
   },
   {
