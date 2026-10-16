@@ -64,6 +64,9 @@ jobs:
         run: |
           tree-sitter generate
 
+      - name: Validate generated parser
+        run: tree-sitter parse --grammar-path . --quiet tests/fixtures/example.carbon
+
       - name: Upload generated files
         uses: actions/upload-artifact@v7.0.1
         with:
