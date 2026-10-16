@@ -1,0 +1,5 @@
+[tools]
+node = "26"
+python = "3.12"
+tree-sitter = "0.26.9"
+uv = "latest"
