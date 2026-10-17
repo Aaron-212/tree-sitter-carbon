@@ -61,8 +61,7 @@ jobs:
           fi
 
       - name: Generate parser files
-        run: |
-          tree-sitter generate
+        run: tree-sitter generate
 
       - name: Validate generated parser
         run: tree-sitter parse --grammar-path . --quiet tests/fixtures/example.carbon

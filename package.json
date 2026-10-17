@@ -7,7 +7,7 @@
     "url": "git+https://github.com/aaron-212/tree-sitter-carbon.git"
   },
   "funding": "",
-  "license": "MIT",
+  "license": "MIT AND (Apache-2.0 WITH LLVM-exception)",
   "author": {
     "name": "Carbon Developers",
     "url": ""
